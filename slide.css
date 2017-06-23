@@ -1,0 +1,79 @@
+.sliderbox{
+	width:1000%;
+	overflow:hidden;
+	position:absolute;
+	left:-992px;
+}
+.sliderbox li{
+	float:left;
+	display:inline;
+}
+.btn{
+	position:absolute;
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	top:50%;
+	transform:translateY(-50%);
+}
+.btn:hover{
+	background-color:rgba(255,255,255,0.5);
+}
+.btn:before,.btn:after{
+	width:25px;
+	height:3px;
+	background-color:rgba(255,255,255,0.7);
+	content:"";
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	transition:all 0.5s;
+}
+.btn:before{
+	transform:rotate(60deg);
+}
+.btn:after{
+	transform:rotate(-60deg);
+}
+.btn:hover:before{
+	transform:rotate(45deg);
+	background-color:#f40;
+}
+.btn:hover:after{
+	transform:rotate(-45deg);
+	background-color:#f40;
+}
+.leftbtn:before,.leftbtn:after{
+	transform-origin:1px center;
+	left:15px;
+}
+.leftbtn{
+	left:10px;
+}
+.rightbtn{
+	right:10px;
+}
+.rightbtn:before,.rightbtn:after{
+	transform-origin:24px center;
+	right:15px;
+}
+.sliderbtn{
+	position:absolute;
+	left:50%;
+	bottom:10px;
+	transform:translateX(-50%);
+	overflow:hidden;
+}
+.sliderbtn li{
+	height:15px;
+	width:15px;
+	border-radius:50%;
+	background-color:rgba(255,255,255,0.8);
+	float:left;
+	margin:5px;
+	transition:transform 0.5s;
+}
+.sliderbtn li.cur{
+	background-color:#f40;
+	transform:scale(1.5);
+}
